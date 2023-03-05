@@ -1,0 +1,113 @@
+@media screen and (min-width: 480px) {
+  .container {
+    width: 426px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-navigation {
+    display: none;
+  }
+  .header-address {
+    display: none;
+  }
+
+  .header-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+    stroke: var(--main-title-color);
+    background-color: transparent;
+    line-height: 0;
+  }
+
+  /*---------------------------Mobile-menu--*/
+  .mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-height: 796px;
+    background-color: var(--color-theme-dark);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    transition: opasity 500ms linear, visibility 500ms linear;
+  }
+  .mobile-menu-box {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    overflow: auto;
+    outline: 1px solid #a45757;
+  }
+  no-scroll {
+    overflow: hidden;
+  }
+  .mobile-menu-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+  .mobile-menu-close-icon {
+    width: 8px;
+    height: 8px;
+  }
+  .mobile-menu-item {
+    margin-bottom: 20px;
+  }
+  .mobile-menu-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: var(--typical-ls);
+    color: var(--main-title-color);
+  }
+
+  .mobile-menu-social-box {
+    width: 100%;
+  }
+  .mobile-address {
+  }
+  .mobile-tel {
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.11;
+    color: var(--theme-dark);
+    margin-bottom: 40px;
+  }
+  .mobile-mail {
+    display: block;
+    margin-bottom: 48px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: var(--typical-ls);
+    color: var(--second-title-color);
+  }
+  .mobile-menu-box .social-list {
+    justify-content: space-between;
+  }
+  /* -------------------------------Hero-- */
+}
