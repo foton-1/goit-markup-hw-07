@@ -1,6 +1,7 @@
 @media screen and (min-width: 768px) {
   .header-btn,
-  .mobile-menu {
+  .mobile-menu,
+  .services {
     display: none;
   }
   .container {
@@ -55,7 +56,6 @@
     margin-bottom: 6px;
   }
   /* -------------------------------Hero-- */
-
   .hero {
     padding-top: 112px;
     padding-bottom: 108px;
@@ -73,5 +73,41 @@
     margin-bottom: 40px;
     font-size: 56px;
     line-height: calc(60 / 56);
+  }
+  /* --------------------------TEAM-- */
+  /*.social-link:focus {
+      background-color: var(--akcent-color);
+    } 
+  */
+  /* ----------------------------Customers */
+  /* .customers-logo {
+    transition-property: border-color;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
+    } 
+  */
+  /* .customers-img {
+    transition-property: fill;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
+  } */
+
+  /* .customers-logo:focus .customers-img {
+   fill: var(--akcent-color);
+   } 
+  */
+
+  /* ----------------------Footer-- */
+  /* .footer-social-list .social-link {
+    transition-property: background-color;
+  transition-duration: var(--h-timing-duration);
+  transition-timing-function: var(--h-timing-function);
+ } */
+  /* .footer-social-list .social-link:focus {
+  background-color: #31d0aa;
+ } */
+
+  .btn-subscribe:focus {
+    background-color: var(--akcent-color);
   }
 }

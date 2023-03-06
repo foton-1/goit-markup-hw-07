@@ -13,7 +13,7 @@
   letter-spacing: var(--typical-ls);
   color: var(--main-title-color);
   text-align: center;
-} */
+  } */
   .header-btn {
     display: none;
   }
@@ -87,28 +87,27 @@
 
   /* .header-list-item {
   position: relative;
-}
- */
+  } */
   /*Або варіант відступу емейл та телеф: 
-.header-address-item:not(:last-child) {
+  .header-address-item:not(:last-child) {
   margin-right: 40px;
-}*/
+  }*/
   /* .header-address {
   margin-left: auto;
-} */
+  } */
   /* 
-.header-list {
+  .header-list {
   display: flex;
   gap: 40px;
-} */
+  } */
   /*-- як альтернатива для "gap" можливі варіанти: 
-.header-list-item:not(:last-child) {
+  .header-list-item:not(:last-child) {
   margin-right: 40px;
-}
-або
-.header-list .header-list-item + .header-list-item {
+  }
+  або
+  .header-list .header-list-item + .header-list-item {
   margin-left: 40px;
-}--*/
+  }--*/
 
   /* -------------------------------Hero-- */
   .hero {
@@ -144,26 +143,25 @@
   /* .concept {
   padding-top: 120px;
   padding-bottom: 120px;
-} */
+  } */
 
   /* .concept-list {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-} */
+  } */
   /* Як варіант замість gap:
-.concept-item {
+  .concept-item {
   width: calc((100% - 72px) / 4);
   margin-right: 24px;
-}
-.concept-item:nth-child(4) {
+  }
+  .concept-item:nth-child(4) {
   margin-right: 0;
-}
-*/
+  } */
   /* .concept-item {
   width: calc((100% - 72px) / 4);
-}
-.concept-item::before {
+  } 
+  .concept-item::before {
   display: block;
   content: '';
   height: 112px;
@@ -173,36 +171,36 @@
   background-repeat: no-repeat;
   background-size: 64px;
   margin-bottom: 8px;
-} */
+  } */
   /* .icon-strategy::before {
   background-image: url(../images/antenna.svg);
-}
-.icon-punctuality::before {
+  }
+  .icon-punctuality::before {
   background-image: url(../images/clock.svg);
-}
-.icon-diligence::before {
+  }
+  .icon-diligence::before {
   background-image: url(../images/diagram.svg);
-}
-.icon-technologies::before {
+  }
+  .icon-technologies::before {
   background-image: url(../images/astronaut.svg);
-} */
+  } */
 
   /*--------------------------------------services--*/
-  /* .services {
-  padding-bottom: 120px;
-}
-.services-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.services-title {
-  margin-bottom: 72px;
-}
-.services-img {
-  border: 1px solid var(--text-color-light);
-  width: calc((100% - 48px - 0px) / 3);
-} */
+  .services {
+    padding-bottom: 120px;
+  }
+  .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .services-title {
+    margin-bottom: 72px;
+  }
+  .services-img {
+    border: 1px solid var(--text-color-light);
+    width: calc((100% - 48px - 0px) / 3);
+  }
 
   /*----------------------------------------TEAM----*/
   /* .team {
@@ -213,20 +211,20 @@
   margin-left: auto;
 
   background-color: var(--logo-color-light);
-} */
+  } */
   /* .team-title {
   margin-bottom: 72px;
-}
-.team-container {
+  }
+ .team-container {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-} */
+  } */
 
   /* .team-person {
   max-width: calc((100% - 72px) / 4);
-}
-.team-person {
+  }
+  .team-person {
   } */
   /*(text-align: center;)*/
 
@@ -239,37 +237,205 @@
 
   background-color: var(--color-theme-dark);
   text-align: center;
-} */
+  } */
   /* .team-person-text {
   margin-bottom: 8px;
-} */
+  } */
 
   /* .social-list-item {
-}
-.social-link {
+  }
+  .social-link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-} */
+  } */
   /* .social-list .social-link {
   background-color: var(--theme-dark);
 
   transition-property: background-color;
   transition-duration: var(--h-timing-duration);
   transition-timing-function: var(--h-timing-function);
-} */
+  } */
   /*можна виконати як background-image у посиланні 
-social-link задавши посиланню висоту і ширину,
- але не буде динамічного кольору*/
+  social-link задавши посиланню висоту і ширину,
+  але не буде динамічного кольору*/
 
   /* .social-link:hover,
-.social-link:focus {
+ .social-link:focus {
   background-color: var(--akcent-color);
-}
-.social-icon {
-} */
+ }
+ .social-icon {
+ } */
   /*==========================================/TEAM===*/
+  /* ------------------------------Customers-- */
+  /* .customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+ } */
+  /* .customers-title {
+  margin-bottom: 72px;
+ }
+ .customers-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  } */
+  /*justify-content: center;*/
+  /* .customers-item {
+ }
+ .customers-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+  border: 1px solid var(--custommers-color-norm);
+  border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: var(--h-timing-duration);
+  transition-timing-function: var(--h-timing-function);
+ } */
+  /* .customers-logo:hover,
+ .customers-logo:focus {
+  border-color: var(--akcent-color);
+ } */
+  /* .customers-img {
+  width: 104px;
+  height: 56px;
+  fill: var(--custommers-color-norm);
+
+  transition-property: fill;
+  transition-duration: var(--h-timing-duration);
+  transition-timing-function: var(--h-timing-function);
+ } */
+  /* .customers-logo:hover .customers-img,
+ .customers-logo:focus .customers-img {
+  fill: var(--akcent-color);
+ } */
+
+  /* ---------------------------Footer-- */
+  /* .footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width: var(--max-width-section);
+  margin-right: auto;
+  margin-left: auto;
+
+  background-color: var(--main-title-color);
+ } */
+  /* .footer-text {
+  margin-top: 16px;
+
+  line-height: var(--typical-lh);
+  letter-spacing: var(--typical-ls);
+  color: var(--text-color-light);
+  max-width: 264px;
+ }
+ .footer-container {
+  display: flex;
+ } */
+
+  /* .footer-logo-box {
+    margin-right: 120px;
+ } */
+  /*(display: inline-block;)*/
+  /* .footer-social-box {
+  margin-right: 80px;
+  } */
+  /*(display: inline-block;
+  max-width: 208px;
+  vertical-align: top;)*/
+  /* .footer-heading {
+  font-weight: 500;
+  line-height: var(--typical-lh);
+  letter-spacing: var(--typical-ls);
+  color: var(--color-theme-dark);
+  margin-bottom: 16px;
+ } */
+  /* .footer-social-list {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+ } */
+  /* .footer-social-list .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
+  transition-duration: var(--h-timing-duration);
+  transition-timing-function: var(--h-timing-function);
+ } */
+  /* .footer-social-list .social-link:hover,
+ .footer-social-list .social-link:focus {
+  background-color: #31d0aa;
+ } */
+  /* .footer-social-item {
+ } */
+
+  /* .footer-subscribe-box {
+  display: flex;
+  gap: 24px;
+ } */
+
+  /* .subscribe-input {
+  width: 264px;
+  height: 40px;
+  color: var(--color-theme-dark);
+  background-color: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+ } */
+  /* .subscribe-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+ } */
+  /* .footer-subscribe-box {
+ } */
+
+  /* .btn-subscribe {
+  display: flex;
+  gap: 16px;
+  width: 165px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  line-height: var(--typical-lh);
+  letter-spacing: 0.04em;
+  color: var(--color-theme-dark);
+  background: var(--theme-dark);
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-style: none;
+  transition: background-color var(--h-timing-duration) var(--h-timing-function);
+ } */
+  /* .btn-subscribe:hover,
+ .btn-subscribe:focus {
+  background-color: var(--akcent-color);
+  } */
+  /*(box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);)*/
+  /* .btn-subscribe::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: inherit;
+  background-image: url(../images/futer-send-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+ } */
 }

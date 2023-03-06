@@ -7,10 +7,9 @@
 }
 
 @media screen and (max-width: 767px) {
-  .header-navigation {
-    display: none;
-  }
-  .header-address {
+  .header-navigation,
+  .header-address,
+  .services {
     display: none;
   }
 
@@ -109,5 +108,16 @@
   .mobile-menu-box .social-list {
     justify-content: space-between;
   }
+
   /* -------------------------------Hero-- */
+
+  /* ----------------------------Concept-- */
+  .concept-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+  .concept-item .section-heading {
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    font-weight: 700;
+  }
 }
