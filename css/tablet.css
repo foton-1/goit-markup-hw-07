@@ -4,6 +4,10 @@
   .services {
     display: none;
   }
+  :root {
+    --max-width-section: 768px;
+  }
+
   .container {
     width: 766px;
   }
@@ -64,6 +68,7 @@
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/people-office-heder-tabl-x1.jpg);
+    max-width: var(--max-width-section);
   }
   .hero-box {
     max-width: 496px;
@@ -74,18 +79,65 @@
     font-size: 56px;
     line-height: calc(60 / 56);
   }
+
+  /* -------------------------Concept---- */
+  .concept-container {
+  }
+  .concept-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -72px;
+    margin-left: -24px;
+    /* gap: 24px; */
+  }
+  .concept-item {
+    width: calc((100% - 48px) / 2);
+    margin-left: 24px;
+    margin-top: 72px;
+  }
+  .concept-item .section-heading {
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    font-weight: 700;
+  }
   /* --------------------------TEAM-- */
+  .team {
+    padding-bottom: 104px;
+    max-width: var(--max-width-section);
+  }
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    /* max-width: 554px;
+    margin-top: -64px;
+    margin-left: -24px;
+    margin-right: 0; */
+  }
+  .team-person {
+    max-width: calc((100% -24px) / 2);
+    margin-top: 64px;
+    margin-left: 24px;
+    margin-bottom: 0;
+  }
   /*.social-link:focus {
       background-color: var(--akcent-color);
     } 
   */
   /* ----------------------------Customers */
-  /* .customers-logo {
+  .customers-logo {
+    width: 168px;
     transition-property: border-color;
     transition-duration: var(--h-timing-duration);
     transition-timing-function: var(--h-timing-function);
-    } 
-  */
+  }
+  .customers-container {
+    margin-left: -24px;
+    /* gap: 16px; */
+  }
+  .customers-item {
+    margin-left: 24px;
+  }
   /* .customers-img {
     transition-property: fill;
     transition-duration: var(--h-timing-duration);
@@ -98,14 +150,47 @@
   */
 
   /* ----------------------Footer-- */
-  /* .footer-social-list .social-link {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 108px;
+  }
+  .footer-logo-box {
+    /* text-align: center; */
+    margin-right: 24px;
+  }
+  .footer-social-box {
+    margin-top: 0;
+    text-align: center;
+    margin-right: 80px;
+  }
+  .footer-subscribe {
+    margin-top: 72px;
+  }
+  .footer-heading {
+    text-align: left;
+  }
+  .footer-social-list .social-link {
     transition-property: background-color;
-  transition-duration: var(--h-timing-duration);
-  transition-timing-function: var(--h-timing-function);
- } */
-  /* .footer-social-list .social-link:focus {
-  background-color: #31d0aa;
- } */
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
+  }
+  .footer-social-list .social-link:focus {
+    background-color: #31d0aa;
+  }
+  .footer-subscribe-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .subscribe-input {
+    width: 264px;
+  }
+
+  .btn-subscribe {
+    margin-top: 0;
+  }
 
   .btn-subscribe:focus {
     background-color: var(--akcent-color);
