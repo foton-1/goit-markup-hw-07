@@ -24,11 +24,20 @@
   .header-container {
     padding-bottom: 28px;
   }
-  .logo-theme-light {
-    margin-bottom: 0;
-  }
   .header-navigation {
     margin-bottom: 0;
+  }
+  .header-link {
+    display: block;
+    font-weight: 500;
+    line-height: var(--typical-lh);
+    color: var(--main-title-color);
+    transition-property: color;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
+  }
+  .active {
+    color: var(--akcent-color);
   }
   .header-address-list {
     display: flex;
@@ -37,11 +46,6 @@
 
   /*font-size: 16px;*/
 
-  .header-link {
-    transition-property: color;
-    transition-duration: var(--h-timing-duration);
-    transition-timing-function: var(--h-timing-function);
-  }
   .active {
     position: relative;
   }
@@ -59,7 +63,10 @@
   .section-description {
     font-weight: 400;
   }
-
+  .header-list {
+    display: flex;
+    gap: 40px;
+  }
   .header-link:hover,
   .header-link:focus {
     color: var(--akcent-color);
@@ -76,7 +83,14 @@
     transition-duration: var(--h-timing-duration);
     transition-timing-function: var(--h-timing-function);
   }
-  .header-mail {
+  .header-mail,
+  .header-tel {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: 0.04em;
+    color: var(--second-title-color);
+    letter-spacing: var(--typical-ls);
     margin-bottom: 0;
     display: inline;
   }
@@ -92,7 +106,7 @@
   /* .header-list-item {
   position: relative;
   } */
-  /*Або варіант відступу емейл та телеф: 
+  /*(Або варіант відступу емейл та телеф: 
   .header-address-item:not(:last-child) {
   margin-right: 40px;
   }*/
@@ -104,14 +118,14 @@
   display: flex;
   gap: 40px;
   } */
-  /*-- як альтернатива для "gap" можливі варіанти: 
+  /*-- (як альтернатива для "gap" можливі варіанти: 
   .header-list-item:not(:last-child) {
   margin-right: 40px;
   }
   або
   .header-list .header-list-item + .header-list-item {
   margin-left: 40px;
-  }--*/
+  }--)*/
 
   /* -------------------------------Hero-- */
   .hero {
@@ -126,6 +140,7 @@
   }
   .hero-box {
     max-width: 496px;
+    padding: 0;
   }
 
   .hero-title {
@@ -153,8 +168,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    margin-top: 0;
-    margin-left: 0;
   }
   /* Як варіант замість gap:
   .concept-item {
@@ -167,8 +180,6 @@
 
   .concept-item {
     width: calc((100% - 72px) / 4);
-    margin-left: 0;
-    margin-top: 0;
   }
   .concept-item::before {
     display: block;
@@ -181,7 +192,6 @@
     background-size: 64px;
     margin-bottom: 8px;
   }
-
   .icon-strategy::before {
     background-image: url(../images/antenna.svg);
   }
@@ -218,61 +228,31 @@
     padding-bottom: 120px;
     max-width: var(--max-width-section);
   }
-  /* .team-container {
+  .team-container {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-  } */
-
+    max-width: 100%;
+  }
   .team-person {
     max-width: calc((100% - 72px) / 4);
+    margin-bottom: 0;
   }
 
-  /*(text-align: center;)*/
-
-  /* .team-person-info {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
-
-  background-color: var(--color-theme-dark);
-  text-align: center;
-  } */
-
-  /* .team-person-text {
-  margin-bottom: 8px;
-  } */
-
-  /* .social-list-item {
+  .social-list .social-link {
+    transition-property: background-color;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
   }
-  .social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  } */
-
-  /* .social-list .social-link {
-  background-color: var(--theme-dark);
-
-  transition-property: background-color;
-  transition-duration: var(--h-timing-duration);
-  transition-timing-function: var(--h-timing-function);
-  } */
   /*можна виконати як background-image у посиланні 
   social-link задавши посиланню висоту і ширину,
   але не буде динамічного кольору*/
 
-  /* .social-link:hover,
+  .social-link:hover,
   .social-link:focus {
-  background-color: var(--akcent-color);
+    background-color: var(--akcent-color);
   }
-  .social-icon {
-  } */
+
   /*==========================================/TEAM===*/
   /* ------------------------------Customers-- */
   .customers {
@@ -280,8 +260,6 @@
     padding-bottom: 120px;
   }
   .customers-container {
-    display: flex;
-    flex-wrap: wrap;
     gap: 24px;
     margin-left: 0;
     margin-top: 0;
@@ -290,39 +268,28 @@
     margin-left: 0;
     margin-top: 0;
   }
-  /*justify-content: center;*/
-  /* 
- .customers-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 168px;
-  height: 88px;
-  border: 1px solid var(--custommers-color-norm);
-  border-radius: 4px;
 
-  transition-property: border-color;
-  transition-duration: var(--h-timing-duration);
-  transition-timing-function: var(--h-timing-function);
-  } */
-  /* .customers-logo:hover,
+  .customers-logo {
+    width: 168px;
+    transition-property: border-color;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
+  }
+  .customers-logo:hover,
   .customers-logo:focus {
-  border-color: var(--akcent-color);
-  } */
-  /* .customers-img {
-  width: 104px;
-  height: 56px;
-  fill: var(--custommers-color-norm);
+    border-color: var(--akcent-color);
+  }
+  .customers-img {
+    width: 104px;
+    transition-property: fill;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
+  }
 
-  transition-property: fill;
-  transition-duration: var(--h-timing-duration);
-  transition-timing-function: var(--h-timing-function);
-  } */
-
-  /* .customers-logo:hover .customers-img,
- .customers-logo:focus .customers-img {
-  fill: var(--akcent-color);
-  } */
+  .customers-logo:hover .customers-img,
+  .customers-logo:focus .customers-img {
+    fill: var(--akcent-color);
+  }
 
   /* ---------------------------Footer-- */
   .footer {
@@ -333,16 +300,17 @@
     max-width: 264px;
   }
   .footer-container {
-    padding-left: 0;
-    /* display: flex; */
+    display: flex;
+    flex-wrap: wrap;
   }
-
   .footer-logo-box {
     margin-right: 120px;
+    text-align: left;
   }
   /*(display: inline-block;)*/
 
   .footer-social-box {
+    margin-top: 0;
     margin-right: 80px;
   }
   /*(display: inline-block;
@@ -351,14 +319,21 @@
   .footer-subscribe {
     margin-top: 0;
   }
-
+  .footer-heading {
+    text-align: left;
+  }
   /* (.footer-social-list {
     list-style: none;
     display: flex;
     gap: 16px;
   } */
-
-  .footer-social-list .social-link:hover {
+  .footer-social-list .social-link {
+    transition-property: background-color;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
+  }
+  .footer-social-list .social-link:hover,
+  .footer-social-list .social-link:focus {
     background-color: #31d0aa;
   }
   .footer-subscribe-box {
@@ -366,19 +341,13 @@
     gap: 24px;
   }
 
-  .btn-subscribe:hover {
+  .btn-subscribe {
+    margin-top: 0;
+  }
+
+  .btn-subscribe:hover,
+  .btn-subscribe:focus {
     background-color: var(--akcent-color);
   }
   /*(box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);)*/
-  .btn-subscribe::after {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-color: inherit;
-    background-image: url(../images/futer-send-icon.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-  }
 }

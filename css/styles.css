@@ -80,9 +80,7 @@ span.akcent {
   height: 40px;
   border-radius: 50%;
 }
-.active {
-  color: var(--akcent-color);
-}
+
 .section-title {
   font-size: 36px;
   line-height: calc(40 / 36);
@@ -105,10 +103,10 @@ span.akcent {
   letter-spacing: var(--typical-ls);
   color: var(--second-title-color);
 }
-/* 
+
 .logo-theme-dark {
-    color: var(--logo-color-light);
-} */
+  color: var(--logo-color-light);
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -116,7 +114,6 @@ span.akcent {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -201,7 +198,7 @@ span.akcent {
 /*----------------------------------------TEAM----*/
 .team {
   padding-top: 96px;
-  padding-bottom: 128px;
+  padding-bottom: 96px;
   max-width: 428px;
   margin-right: auto;
   margin-left: auto;
@@ -263,7 +260,6 @@ social-link задавши посиланню висоту і ширину,
   justify-content: center;
   margin-top: -72px;
   margin-left: -16px;
-  /* gap: 16px; */
 }
 /*justify-content: center;*/
 .customers-item {
@@ -282,7 +278,7 @@ social-link задавши посиланню висоту і ширину,
 }
 
 .customers-img {
-  width: 104px;
+  width: 110px;
   height: 56px;
   fill: var(--custommers-color-norm);
 }
@@ -311,13 +307,10 @@ social-link задавши посиланню висоту і ширину,
 }
 .footer-logo-box {
   text-align: center;
-  /* margin-right: 120px; */
 }
-/*(display: inline-block;)*/
 .footer-social-box {
   margin-top: 72px;
   text-align: center;
-  /* margin-right: 80px; */
 }
 /*(display: inline-block;
   max-width: 208px;

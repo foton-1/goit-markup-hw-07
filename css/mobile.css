@@ -49,9 +49,9 @@
     justify-content: space-between;
     align-items: start;
     overflow: auto;
-    outline: 1px solid #a45757;
   }
-  no-scroll {
+
+  .no-scroll {
     overflow: hidden;
   }
   .mobile-menu-close-btn {
@@ -82,11 +82,17 @@
     letter-spacing: var(--typical-ls);
     color: var(--main-title-color);
   }
-
+  .active {
+    color: var(--akcent-color);
+  }
   .mobile-menu-social-box {
     width: 100%;
   }
-  .mobile-address {
+  .mobile-address-list {
+    margin-bottom: 48px;
+  }
+  .mobile-address-item:first-child {
+    margin-bottom: 40px;
   }
   .mobile-tel {
     display: block;
@@ -94,11 +100,9 @@
     font-size: 30px;
     line-height: 1.11;
     color: var(--theme-dark);
-    margin-bottom: 40px;
   }
   .mobile-mail {
     display: block;
-    margin-bottom: 48px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -120,7 +124,8 @@
     line-height: calc(40 / 36);
     font-weight: 700;
   }
-  /*--------------------------------------services--*/
+  /*--------------------------------------services-
+  секція відсутня в мобілці--*/
 
   /*----------------------------------------TEAM----*/
 

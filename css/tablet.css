@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header-btn,
   .mobile-menu,
   .services {
@@ -20,14 +20,17 @@
   .logo-theme-light {
     margin-bottom: 12px;
   }
-  .header-btn {
-    display: none;
-  }
   .header-link {
     display: block;
     font-weight: 500;
     line-height: var(--typical-lh);
     color: var(--main-title-color);
+    transition-property: color;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
+  }
+  .active {
+    color: var(--akcent-color);
   }
   .active {
     position: relative;
@@ -47,6 +50,9 @@
     display: flex;
     gap: 40px;
   }
+  .header-link:focus {
+    color: var(--akcent-color);
+  }
   .header-mail,
   .header-tel {
     font-weight: 400;
@@ -54,10 +60,15 @@
     line-height: calc(14 / 12);
     letter-spacing: 0.04em;
     color: var(--second-title-color);
+    letter-spacing: 0.04em;
   }
   .header-mail {
     display: block;
     margin-bottom: 6px;
+  }
+  .header-mail:focus,
+  .header-tel:focus {
+    color: var(--akcent-color);
   }
   /* -------------------------------Hero-- */
   .hero {
@@ -79,10 +90,15 @@
     font-size: 56px;
     line-height: calc(60 / 56);
   }
-
-  /* -------------------------Concept---- */
-  .concept-container {
+  .hero-btn {
+    transition-property: background-color;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
   }
+  .hero-btn:focus {
+    background-color: var(--akcent-color);
+  }
+  /* -------------------------Concept---- */
   .concept-list {
     display: flex;
     flex-wrap: wrap;
@@ -100,30 +116,34 @@
     line-height: calc(40 / 36);
     font-weight: 700;
   }
+  /*--------------------------------------services-
+   секція відсутня в планшетні--*/
+
   /* --------------------------TEAM-- */
   .team {
-    padding-bottom: 104px;
     max-width: var(--max-width-section);
   }
   .team-container {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    /* max-width: 554px;
-    margin-top: -64px;
-    margin-left: -24px;
-    margin-right: 0; */
+    max-width: 554px;
+    margin-top: -40px;
   }
   .team-person {
     max-width: calc((100% -24px) / 2);
-    margin-top: 64px;
-    margin-left: 24px;
+    margin-top: 40px;
     margin-bottom: 0;
   }
-  /*.social-link:focus {
-      background-color: var(--akcent-color);
-    } 
-  */
+  .social-list .social-link {
+    transition-property: background-color;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
+  }
+  .social-link:focus {
+    background-color: var(--akcent-color);
+  }
+
   /* ----------------------------Customers */
   .customers-logo {
     width: 168px;
@@ -138,16 +158,18 @@
   .customers-item {
     margin-left: 24px;
   }
-  /* .customers-img {
+  .customers-logo:focus {
+    border-color: var(--akcent-color);
+  }
+  .customers-img {
+    width: 104px;
     transition-property: fill;
     transition-duration: var(--h-timing-duration);
     transition-timing-function: var(--h-timing-function);
-  } */
-
-  /* .customers-logo:focus .customers-img {
-   fill: var(--akcent-color);
-   } 
-  */
+  }
+  .customers-logo:focus .customers-img {
+    fill: var(--akcent-color);
+  }
 
   /* ----------------------Footer-- */
   .footer-container {
@@ -156,8 +178,8 @@
     padding-left: 108px;
   }
   .footer-logo-box {
-    /* text-align: center; */
     margin-right: 24px;
+    text-align: left;
   }
   .footer-social-box {
     margin-top: 0;
