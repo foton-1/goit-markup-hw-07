@@ -407,17 +407,25 @@ social-link задавши посиланню висоту і ширину,
 }
 /*=========================================/FOOTER==*/
 /*--------------------------------------PORTFOLIO---*/
-.portfolio-section {
-  padding-top: 96px;
-  padding-bottom: 120px;
+.header-portfolio {
+  border: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-
+.portfolio-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
 .filter {
-  margin-bottom: 72px;
-
+  margin-bottom: 48px;
   display: flex;
-  gap: 24px;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: start;
+  margin-top: -8px;
+}
+.filter-component {
+  margin-top: 8px;
 }
 .filter-btn {
   padding: 12px 24px;
@@ -451,7 +459,7 @@ social-link задавши посиланню висоту і ширину,
   gap: 24px;
 }
 .example {
-  width: calc((100% - 48px) / 3);
+  width: 100%;
   background: var(--color-theme-dark);
 }
 .example:not(:nth-child(-n + 3)) {
@@ -483,7 +491,9 @@ social-link задавши посиланню висоту і ширину,
   border-left: 1px solid var(--text-color-light);
   border-right: 1px solid var(--text-color-light);
 }
-
+.exam-description .section-heading {
+  text-align: left;
+}
 /*----------------------------------------Overlay--*/
 .example-link-overlay {
   position: relative;
