@@ -20,6 +20,11 @@
   .logo-theme-light {
     margin-bottom: 12px;
   }
+  .active {
+    color: var(--akcent-color);
+  }
+
+  /*--------------------------------------HEADER------*/
   .header-link {
     display: block;
     font-weight: 500;
@@ -29,13 +34,10 @@
     transition-duration: var(--h-timing-duration);
     transition-timing-function: var(--h-timing-function);
   }
-  .active {
-    color: var(--akcent-color);
-  }
-  .active {
+  .header-list-item .active {
     position: relative;
   }
-  .active::after {
+  .header-list-item .active::after {
     position: absolute;
     left: 0;
     bottom: -24px;
@@ -52,6 +54,7 @@
   }
   .header-link:focus {
     color: var(--akcent-color);
+    outline: none;
   }
   .header-mail,
   .header-tel {
@@ -69,10 +72,10 @@
   .header-mail:focus,
   .header-tel:focus {
     color: var(--akcent-color);
+    outline: none;
   }
   /* -------------------------------Hero-- */
   .hero {
-    padding-top: 112px;
     padding-bottom: 108px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -80,6 +83,14 @@
       ),
       url(../images/people-office-heder-tabl-x1.jpg);
     max-width: var(--max-width-section);
+  }
+  /* Медіаправила для зобрежень tablet 2х */
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .hero {
+      background-image: url(../images/people-office-heder-tabl-x2.jpg);
+    }
   }
   .hero-box {
     max-width: 496px;
@@ -97,6 +108,7 @@
   }
   .hero-btn:focus {
     background-color: var(--akcent-color);
+    outline: none;
   }
   /* -------------------------Concept---- */
   .concept-list {
@@ -104,7 +116,6 @@
     flex-wrap: wrap;
     margin-top: -72px;
     margin-left: -24px;
-    /* gap: 24px; */
   }
   .concept-item {
     width: calc((100% - 48px) / 2);
@@ -142,6 +153,7 @@
   }
   .social-link:focus {
     background-color: var(--akcent-color);
+    outline: none;
   }
 
   /* ----------------------------Customers */
@@ -153,13 +165,13 @@
   }
   .customers-container {
     margin-left: -24px;
-    /* gap: 16px; */
   }
   .customers-item {
     margin-left: 24px;
   }
   .customers-logo:focus {
     border-color: var(--akcent-color);
+    outline: none;
   }
   .customers-img {
     width: 104px;
@@ -169,6 +181,7 @@
   }
   .customers-logo:focus .customers-img {
     fill: var(--akcent-color);
+    outline: none;
   }
 
   /* ----------------------Footer-- */
@@ -215,6 +228,24 @@
   }
 
   .btn-subscribe:focus {
+    background-color: var(--akcent-color);
+    outline: none;
+  }
+
+  /*--------------------------------------PORTFOLIO---*/
+  /*----------------------------------------Overlay--*/
+  /*----------------------------------------Modal--*/
+  .modal {
+    max-width: 408px;
+  }
+  .btn-modal-close:focus {
+    background: var(--akcent-color);
+  }
+  .btn-modal-close:focus .modal-close-icon {
+    fill: var(--color-theme-dark);
+  }
+  /*-----------------------------------------Modal-Form--*/
+  .btn-modal-send:focus {
     background-color: var(--akcent-color);
   }
 }

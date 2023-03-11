@@ -11,18 +11,20 @@
   }
 
   /* --------------------COMPONENTS-- */
-  /* .section-title {
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: var(--typical-ls);
-  color: var(--main-title-color);
-  text-align: center;
-  } */
   .logo {
     line-height: calc(24 / 18);
   }
+  .logo-theme-light {
+    margin-right: 76px;
+  }
+  .active {
+    color: var(--akcent-color);
+  }
+  /*font-size: 16px;*/
+  /*--------------------------------------HEADER------*/
   .header-container {
     padding-bottom: 28px;
+    justify-content: start;
   }
   .header-navigation {
     margin-bottom: 0;
@@ -36,20 +38,13 @@
     transition-duration: var(--h-timing-duration);
     transition-timing-function: var(--h-timing-function);
   }
-  .active {
-    color: var(--akcent-color);
-  }
-  .header-address-list {
-    display: flex;
-    gap: 40px;
-  }
-
-  /*font-size: 16px;*/
-
-  .active {
+  .header-list-item .active {
     position: relative;
   }
-  .active::after {
+  /* .header-list-item {
+  position: relative;
+  } */
+  .header-list-item .active::after {
     position: absolute;
     left: 0;
     bottom: -28px;
@@ -70,8 +65,20 @@
   .header-link:hover,
   .header-link:focus {
     color: var(--akcent-color);
+    outline: none;
   }
-
+  .header-address {
+    margin-left: auto;
+  }
+  .header-address-list {
+    display: flex;
+    gap: 40px;
+  }
+  /*(Або варіант відступу емейл та телеф: 
+  .header-address-item:not(:last-child) {
+  margin-right: 40px;  або
+  .header-list .header-list-item + .header-list-item {
+  margin-left: 40px;}--)*/
   .header-mail,
   .header-tel {
     font-weight: 400;
@@ -97,36 +104,13 @@
   .header-mail:hover,
   .header-mail:focus {
     color: var(--akcent-color);
+    outline: none;
   }
   .header-tel:hover,
   .header-tel:focus {
     color: var(--akcent-color);
+    outline: none;
   }
-
-  /* .header-list-item {
-  position: relative;
-  } */
-  /*(Або варіант відступу емейл та телеф: 
-  .header-address-item:not(:last-child) {
-  margin-right: 40px;
-  }*/
-  /* .header-address {
-  margin-left: auto;
-  } */
-  /* 
-  .header-list {
-  display: flex;
-  gap: 40px;
-  } */
-  /*-- (як альтернатива для "gap" можливі варіанти: 
-  .header-list-item:not(:last-child) {
-  margin-right: 40px;
-  }
-  або
-  .header-list .header-list-item + .header-list-item {
-  margin-left: 40px;
-  }--)*/
-
   /* -------------------------------Hero-- */
   .hero {
     padding-top: 188px;
@@ -138,11 +122,18 @@
       url(../images/people-office-heder-desk-x1.jpg);
     max-width: var(--max-width-section);
   }
+  /* Медіаправила для зобрежень desctop 2х */
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .hero {
+      background-image: url(../images/people-office-heder-desk-x2.jpg);
+    }
+  }
   .hero-box {
     max-width: 496px;
     padding: 0;
   }
-
   .hero-title {
     margin-bottom: 48px;
     font-size: 56px;
@@ -156,7 +147,7 @@
   .hero-btn:hover,
   .hero-btn:focus {
     background-color: var(--akcent-color);
-    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);*/
+    outline: none;
   }
 
   /*-----------------------------------Concept--*/
@@ -169,7 +160,7 @@
     flex-wrap: wrap;
     gap: 24px;
   }
-  /* Як варіант замість gap:
+  /*( Як варіант замість gap:
   .concept-item {
   width: calc((100% - 72px) / 4);
   margin-right: 24px;
@@ -244,20 +235,23 @@
     transition-duration: var(--h-timing-duration);
     transition-timing-function: var(--h-timing-function);
   }
-  /*можна виконати як background-image у посиланні 
+  /*(можна виконати як background-image у посиланні 
   social-link задавши посиланню висоту і ширину,
   але не буде динамічного кольору*/
 
   .social-link:hover,
   .social-link:focus {
     background-color: var(--akcent-color);
+    outline: none;
   }
-
   /*==========================================/TEAM===*/
   /* ------------------------------Customers-- */
   .customers {
     padding-top: 120px;
     padding-bottom: 120px;
+    transition-property: border-color;
+    transition-duration: var(--h-timing-duration);
+    transition-timing-function: var(--h-timing-function);
   }
   .customers-container {
     gap: 24px;
@@ -268,7 +262,6 @@
     margin-left: 0;
     margin-top: 0;
   }
-
   .customers-logo {
     width: 168px;
     transition-property: border-color;
@@ -278,6 +271,7 @@
   .customers-logo:hover,
   .customers-logo:focus {
     border-color: var(--akcent-color);
+    outline: none;
   }
   .customers-img {
     width: 104px;
@@ -322,11 +316,6 @@
   .footer-heading {
     text-align: left;
   }
-  /* (.footer-social-list {
-    list-style: none;
-    display: flex;
-    gap: 16px;
-  } */
   .footer-social-list .social-link {
     transition-property: background-color;
     transition-duration: var(--h-timing-duration);
@@ -335,19 +324,38 @@
   .footer-social-list .social-link:hover,
   .footer-social-list .social-link:focus {
     background-color: #31d0aa;
+    outline: none;
   }
   .footer-subscribe-box {
     display: flex;
     gap: 24px;
   }
-
   .btn-subscribe {
     margin-top: 0;
   }
-
   .btn-subscribe:hover,
   .btn-subscribe:focus {
     background-color: var(--akcent-color);
+    outline: none;
   }
-  /*(box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);)*/
+
+  /*----------------------------------------Modal--*/
+  .modal {
+    max-width: 408px;
+    min-height: 584px;
+  }
+  .btn-modal-close:focus,
+  .btn-modal-close:hover {
+    background: var(--akcent-color);
+    outline: none;
+  }
+  .btn-modal-close:focus .modal-close-icon,
+  .btn-modal-close:hover .modal-close-icon {
+    fill: var(--color-theme-dark);
+  }
+  /*-----------------------------------------Modal-Form--*/
+  .btn-modal-send:hover,
+  .btn-modal-send:focus {
+    background-color: var(--akcent-color);
+  }
 }

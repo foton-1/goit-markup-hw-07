@@ -119,6 +119,9 @@ span.akcent {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.no-scroll {
+  overflow: hidden;
+}
 /*==================================\COMPONENTS=====*/
 /*--------------------------------------HEADER------*/
 .header {
@@ -151,7 +154,14 @@ span.akcent {
   background-position: center;
   background-size: cover;
 }
-/* max-width: var(--max-width-section); */
+/* Медіаправила для зобрежень mobile 2х */
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: url(../images/people-office-heder-mob-x2.jpg);
+  }
+}
 
 .hero-box {
   margin-left: auto;
@@ -236,11 +246,11 @@ span.akcent {
 .team-person-text {
   margin-bottom: 8px;
 }
-.social-list-item {
-}
+
 .social-list .social-link {
   background-color: var(--theme-dark);
 }
+
 /*можна виконати як background-image у посиланні 
 social-link задавши посиланню висоту і ширину,
  але не буде динамічного кольору*/
@@ -302,9 +312,7 @@ social-link задавши посиланню висоту і ширину,
   margin-left: auto;
   text-align: left;
 }
-.footer-container {
-  /* display: flex; */
-}
+
 .footer-logo-box {
   text-align: center;
 }
@@ -403,8 +411,7 @@ social-link задавши посиланню висоту і ширину,
   padding-top: 96px;
   padding-bottom: 120px;
 }
-.portfolio-box {
-}
+
 .filter {
   margin-bottom: 72px;
 
@@ -476,8 +483,7 @@ social-link задавши посиланню висоту і ширину,
   border-left: 1px solid var(--text-color-light);
   border-right: 1px solid var(--text-color-light);
 }
-.example-coment {
-}
+
 /*----------------------------------------Overlay--*/
 .example-link-overlay {
   position: relative;
@@ -510,7 +516,6 @@ social-link задавши посиланню висоту і ширину,
 }
 
 /*----------------------------------------Modal--*/
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -518,30 +523,33 @@ social-link задавши посиланню висоту і ширину,
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 300ms linear, visibility 300ms linear;
+  overflow-y: auto;
 }
-
 .modal {
   position: absolute;
-  top: 50%;
+  top: 96px;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, 0) scale(1);
   transition: transform 300ms linear;
-  width: 408px;
-  min-height: 576px;
+  width: 100%;
+  max-width: 392px;
+  min-height: 586px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding-top: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 24px;
+  overflow: auto;
 }
-/*--Стан схованої модалки:--*/
+
+/*(--Стан схованої модалки:--*/
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
-
 .btn-modal-close {
   display: flex;
   justify-content: center;
@@ -551,39 +559,27 @@ social-link задавши посиланню висоту і ширину,
   border-radius: 50%;
   background: var(--text-color-light);
   border: 1px solid rgba(0, 0, 0, 0.1);
-
   margin-left: auto;
   margin-bottom: 24px;
   padding: 0;
   transition: background var(--h-timing-duration) var(--h-timing-function);
-}
-.btn-modal-close:focus,
-.btn-modal-close:hover {
-  background: var(--akcent-color);
 }
 .modal-close-icon {
   width: 8px;
   height: 8px;
   transition: fill var(--h-timing-duration) var(--h-timing-function);
 }
-.btn-modal-close:focus .modal-close-icon,
-.btn-modal-close:hover .modal-close-icon {
-  fill: var(--color-theme-dark);
-}
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
-/*--замість is-hidden можна display:none,
+/*(--замість is-hidden можна display:none,
 але він не анімується*/
 
 /*-----------------------------------------Modal-Form--*/
-.modal-form {
-}
 .modal-title {
   font-weight: 500;
-  /*font-size: 16px;*/
   line-height: var(--typical-lh);
   letter-spacing: var(--typical-ls);
   color: var(--main-title-color);
@@ -605,7 +601,6 @@ social-link задавши посиланню висоту і ширину,
 }
 .modal-input-wrap-span {
   position: relative;
-  /*--margin-bottom: 8px;--*/
   display: block;
 }
 .modal-input-wrap-div {
@@ -657,14 +652,12 @@ social-link задавши посиланню висоту і ширину,
   height: 56px;
   background: var(--theme-dark);
   font-weight: 500;
-  /*font-size: 16px;*/
   line-height: var(--typical-lh);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-style: none;
   color: var(--color-theme-dark);
   letter-spacing: 0.04em;
-  /*--text-align: center;--*/
   padding-left: 16px;
   padding-right: 16px;
 
@@ -674,10 +667,6 @@ social-link задавши посиланню висоту і ширину,
   transition: background-color var(--h-timing-duration) var(--h-timing-function);
 }
 
-.btn-modal-send:hover,
-.btn-modal-send:focus {
-  background-color: var(--akcent-color);
-}
 .modal-form-message {
   width: 100%;
   height: 120px;
@@ -691,7 +680,7 @@ social-link задавши посиланню висоту і ширину,
   transition: border-color var(--h-timing-duration);
   display: block;
 }
-/*--Зміна властивостей текста placeholder--*/
+/*(--Зміна властивостей текста placeholder--*/
 .modal-form-message::placeholder {
   font-size: 12px;
   line-height: 1.33;
@@ -706,6 +695,7 @@ social-link задавши посиланню висоту і ширину,
 
 .modal-form-check-desc {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
   font-size: 12px;
@@ -714,7 +704,7 @@ social-link задавши посиланню висоту і ширину,
   color: #757575;
   margin-bottom: 24px;
 }
-/*--Створення пробілу (коли схлопнулись флекс елементи з текстом)
+/*(--Створення пробілу (коли схлопнулись флекс елементи з текстом)
 &nbsp - це оригінальний пробіл від браузера--*/
 .policy-link {
   color: var(--theme-dark);
@@ -736,12 +726,17 @@ social-link задавши посиланню висоту і ширину,
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/*--Сховати оригінальний чекбокс - додати йому клас --*/
-/*--Фокус на чекбокс - (має бути на інтерактивних елементах) -
+/*(--Сховати оригінальний чекбокс - додати йому клас --*/
+/*(--Фокус на чекбокс - (має бути на інтерактивних елементах) -
 на бефор повісити фокус не можна. Робимо фейковий фокус--*/
+
 .modal-form-check:focus + .modal-form-check-desc::before {
   outline: none;
   border-color: var(--theme-dark);
 }
-/*--інший варіант фейкового фокусу - створити лейбл, вставити 
+
+/*(--інший варіант фейкового фокусу - створити лейбл, вставити 
 svg іконку з опасіті 0, і при чек змінювати опасіті на 1--*/
+
+/* ----ФОНОВІ ЗОБРАЖЕННЯ- через медіаправила- */
+/* ----КОНТЕКСТОВІ ЗОБРАЖЕННЯ- в html через - srcset */

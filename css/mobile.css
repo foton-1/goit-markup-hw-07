@@ -5,7 +5,11 @@
     margin-right: auto;
   }
 }
-
+@media screen and (max-width: 319px) {
+  body {
+    overflow: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .header-navigation,
   .header-address,
@@ -48,12 +52,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    overflow: auto;
+    /* overflow: auto; */
   }
 
-  .no-scroll {
-    overflow: hidden;
-  }
   .mobile-menu-close-btn {
     position: absolute;
     top: 24px;
