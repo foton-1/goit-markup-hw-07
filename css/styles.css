@@ -125,7 +125,7 @@ span.akcent {
 /*==================================\COMPONENTS=====*/
 /*--------------------------------------HEADER------*/
 .header {
-  border-bottom: 1px solid var(--text-color-light);
+  /* border-bottom: 1px solid var(--text-color-light); */
 }
 .header-container {
   display: flex;
@@ -133,6 +133,7 @@ span.akcent {
   justify-content: space-between;
   padding-top: 24px;
   padding-bottom: 24px;
+  border-bottom: 1px solid var(--text-color-light);
 }
 /*=================================/HEADER======*/
 
@@ -159,7 +160,11 @@ span.akcent {
   screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
-    background-image: url(../images/people-office-heder-mob-x2.jpg);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-heder-mob-x2.jpg);
   }
 }
 
@@ -225,6 +230,8 @@ span.akcent {
 .team-person {
   max-width: 100%;
   display: block;
+}
+.team-person:not(:last-child) {
   margin-bottom: 72px;
 }
 /*(text-align: center;)*/
@@ -244,6 +251,7 @@ span.akcent {
   text-align: center;
 }
 .team-person-text {
+  font-weight: 400;
   margin-bottom: 8px;
 }
 
@@ -267,15 +275,16 @@ social-link задавши посиланню висоту і ширину,
 .customers-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 16px;
   justify-content: center;
-  margin-top: -72px;
-  margin-left: -16px;
+  /* margin-top: -72px;
+  margin-left: -16px; */
 }
 /*justify-content: center;*/
-.customers-item {
+/* .customers-item {
   margin-top: 72px;
   margin-left: 16px;
-}
+} */
 .customers-logo {
   display: flex;
   flex-wrap: wrap;
@@ -360,6 +369,7 @@ social-link задавши посиланню висоту і ширину,
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: border-color var(--h-timing-duration);
 }
 .subscribe-input::placeholder {
   font-weight: 400;
@@ -368,7 +378,10 @@ social-link задавши посиланню висоту і ширину,
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.6);
 }
-
+.subscribe-input:focus {
+  outline: none;
+  border-color: var(--theme-dark);
+}
 .btn-subscribe {
   display: flex;
   gap: 16px;
@@ -408,9 +421,9 @@ social-link задавши посиланню висоту і ширину,
 /*=========================================/FOOTER==*/
 /*--------------------------------------PORTFOLIO---*/
 .header-portfolio {
-  border: 1px solid #e7e9fc;
+  /* border: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); */
 }
 .portfolio-section {
   padding-top: 48px;

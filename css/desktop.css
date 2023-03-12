@@ -127,7 +127,11 @@
     screen and (min-resolution: 192dpi) and (min-width: 1200px),
     screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     .hero {
-      background-image: url(../images/people-office-heder-desk-x2.jpg);
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-heder-desk-x2.jpg);
     }
   }
   .hero-box {
@@ -195,6 +199,12 @@
   .icon-technologies::before {
     background-image: url(../images/astronaut.svg);
   }
+  .concept-item .section-heading {
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    font-weight: 700;
+    text-align: left;
+  }
 
   /*--------------------------------------services--*/
   .services {
@@ -227,9 +237,10 @@
   }
   .team-person {
     max-width: calc((100% - 72px) / 4);
+  }
+  .team-person:not(:last-child) {
     margin-bottom: 0;
   }
-
   .social-list .social-link {
     transition-property: background-color;
     transition-duration: var(--h-timing-duration);
@@ -312,6 +323,7 @@
   vertical-align: top;)*/
   .footer-subscribe {
     margin-top: 0;
+    flex-grow: 1;
   }
   .footer-heading {
     text-align: left;

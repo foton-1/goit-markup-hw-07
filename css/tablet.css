@@ -56,6 +56,9 @@
     color: var(--akcent-color);
     outline: none;
   }
+  .header-address-item {
+    margin-bottom: 6px;
+  }
   .header-mail,
   .header-tel {
     font-weight: 400;
@@ -67,7 +70,6 @@
   }
   .header-mail {
     display: block;
-    margin-bottom: 6px;
   }
   .header-mail:focus,
   .header-tel:focus {
@@ -89,7 +91,11 @@
     screen and (min-resolution: 192dpi) and (min-width: 768px),
     screen and (min-resolution: 2dppx) and (min-width: 768px) {
     .hero {
-      background-image: url(../images/people-office-heder-tabl-x2.jpg);
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-heder-tabl-x2.jpg);
     }
   }
   .hero-box {
@@ -114,18 +120,20 @@
   .concept-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -72px;
-    margin-left: -24px;
+    gap: 24px;
+    /* margin-top: -72px;
+    margin-left: -24px; */
   }
   .concept-item {
     width: calc((100% - 48px) / 2);
-    margin-left: 24px;
-    margin-top: 72px;
+    /* margin-left: 24px;
+    margin-top: 72px; */
   }
   .concept-item .section-heading {
     font-size: 36px;
     line-height: calc(40 / 36);
     font-weight: 700;
+    text-align: left;
   }
   /*--------------------------------------services-
    секція відсутня в планшетні--*/
@@ -139,12 +147,16 @@
     flex-wrap: wrap;
     gap: 24px;
     max-width: 554px;
-    margin-top: -40px;
+    /* margin-top: -40px; */
   }
   .team-person {
     max-width: calc((100% -24px) / 2);
-    margin-top: 40px;
+  }
+  .team-person:not(:last-child) {
     margin-bottom: 0;
+  }
+  .team-person:not(:nth-child(-n + 2)) {
+    margin-top: 40px;
   }
   .social-list .social-link {
     transition-property: background-color;
@@ -157,18 +169,22 @@
   }
 
   /* ----------------------------Customers */
+  .customers-container {
+    width: 552px;
+    gap: 24px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  /* .customers-item {
+    margin-left: 24px;
+  } */
   .customers-logo {
     width: 168px;
     transition-property: border-color;
     transition-duration: var(--h-timing-duration);
     transition-timing-function: var(--h-timing-function);
   }
-  .customers-container {
-    margin-left: -24px;
-  }
-  .customers-item {
-    margin-left: 24px;
-  }
+
   .customers-logo:focus {
     border-color: var(--akcent-color);
     outline: none;
@@ -183,12 +199,21 @@
     fill: var(--akcent-color);
     outline: none;
   }
-
+  @media screen and (max-width: 425px) {
+    .customers-item:nth-child(-n + 2) {
+      margin-top: 64px;
+    }
+  }
   /* ----------------------Footer-- */
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 108px;
+    width: 552px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-text {
+    max-width: 264px;
   }
   .footer-logo-box {
     margin-right: 24px;
@@ -197,7 +222,7 @@
   .footer-social-box {
     margin-top: 0;
     text-align: center;
-    margin-right: 80px;
+    /* margin-right: 80px; */
   }
   .footer-subscribe {
     margin-top: 72px;

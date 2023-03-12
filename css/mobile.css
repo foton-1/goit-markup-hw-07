@@ -33,7 +33,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    max-height: 796px;
+    /* max-height: 796px; */
     background-color: var(--color-theme-dark);
     top: 0;
     left: 0;
@@ -73,7 +73,7 @@
     width: 8px;
     height: 8px;
   }
-  .mobile-menu-item {
+  .mobile-menu-item:not(:last-child) {
     margin-bottom: 20px;
   }
   .mobile-menu-link {
@@ -89,7 +89,7 @@
   .mobile-menu-social-box {
     width: 100%;
   }
-  .mobile-address-list {
+  .mobile-address {
     margin-bottom: 48px;
   }
   .mobile-address-item:first-child {
@@ -97,8 +97,8 @@
   }
   .mobile-tel {
     display: block;
-    font-weight: 600;
-    font-size: 30px;
+    font-weight: 700;
+    font-size: 24px;
     line-height: 1.11;
     color: var(--theme-dark);
   }
@@ -131,6 +131,10 @@
   /*----------------------------------------TEAM----*/
 
   /* ------------------------------Customers-- */
-
+  @media screen and (min-width: 452px) {
+    .customers-item:not(:nth-child(-n + 2)) {
+      margin-top: 64px;
+    }
+  }
   /* ---------------------------Footer-- */
 }
