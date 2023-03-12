@@ -379,8 +379,7 @@
 
   .filter {
     margin-bottom: 72px;
-
-    display: flex;
+    /* display: flex; */
     gap: 24px;
     justify-content: center;
   }
@@ -417,7 +416,6 @@
   }
   .example {
     width: calc((100% - 48px) / 3);
-    background: var(--color-theme-dark);
   }
   .example:not(:nth-child(-n + 3)) {
     margin-top: 24px;
