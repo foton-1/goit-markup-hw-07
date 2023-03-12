@@ -421,7 +421,10 @@ social-link задавши посиланню висоту і ширину,
 /*=========================================/FOOTER==*/
 /*--------------------------------------PORTFOLIO---*/
 .header-portfolio {
-  border: 1px solid #e7e9fc;
+  max-width: var(--max-width-section);
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -463,9 +466,6 @@ social-link задавши посиланню висоту і ширину,
   width: 100%;
   background: var(--color-theme-dark);
 }
-/* .example:not(:nth-child(-n + 3)) {
-  margin-top: 24px;
-} */
 .example-link {
   display: block;
 }
