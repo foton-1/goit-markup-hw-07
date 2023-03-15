@@ -166,12 +166,20 @@
             <li class="example">
               <a class="example-link link" href="">
                 <div class="example-link-overlay">
-                  <img
-                    class="example-img"
-                    src="./images/example-1-min.jpg"
-                    alt="Banking App"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/imgexm-1-desk-min.jpg    1x,
+                        ./images/imgexm-1-desk@2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      class="example-img"
+                      src="./images/example-1-min.jpg"
+                      alt="Banking App"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
